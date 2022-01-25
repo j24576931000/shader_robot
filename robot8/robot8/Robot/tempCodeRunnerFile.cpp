@@ -1,0 +1,1 @@
+glActiveTexture(GL_TEXTURE0);

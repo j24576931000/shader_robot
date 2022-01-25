@@ -1,0 +1,48 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile", 
+      "command": "clang++", 
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "-g", 
+        //"-I",
+        //"C:/Program Files (x86)/Eigen3/include/eigen3",
+        "-Wall",
+        "-static-libgcc",
+        "-fcolor-diagnostics",
+        "--target=x86_64-w64-mingw", 
+        "-std=c++11" ,
+        "-lopengl32",
+        
+        "-lglu32",
+        "-lfreeglut",
+        "-lglew32",
+        "-lglad",
+        "-lglfw3",
+        "-lFreeImage",
+        
+        
+        
+        
+        
+        
+      ], 
+      "type": "shell", 
+      "group": {
+        "kind": "build",
+        "isDefault": true 
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always", 
+        "focus": false, 
+        "panel": "shared" 
+      }
+      // "problemMatcher":"$gcc" 
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+#version 330 core
+
+// Interpolated values from the vertex shaders
+in vec2 UV;
+in vec4 particlecolor;
+
+// Ouput data
+out vec4 color;
+
+uniform sampler2D myTextureSampler;
+
+float m_count=10;
+
+void main(){
+	// Output color = color of the texture at the specified UV
+
+	vec2 uv2 = UV;
+
+    //uv2 = floor(uv2 * m_count) / m_count;
+    //color = texture( myTextureSampler, uv2 )* particlecolor;
+
+	color = texture( myTextureSampler, UV ) * particlecolor;
+
+}
